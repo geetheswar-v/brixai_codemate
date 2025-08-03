@@ -7,7 +7,7 @@ import { MessageList } from '@/components/chat/message-list';
 import { ChatInput } from '@/components/chat/input';
 import { Button } from '@/components/ui/button';
 import { Download, AlertCircle, X } from 'lucide-react';
-import { downloadConversation } from '@/lib/utils';
+import { downloadConversation } from '@/lib/download';
 
 interface ChatPageClientProps {
   sessionId: string;
