@@ -1,26 +1,178 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+.font-josefin {
+  font-family: var(--font-josefin);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #04102f;
+  --card: #ffffff;
+  --card-foreground: #04102f;
+  --popover: #ffffff;
+  --popover-foreground: #04102f;
+  --primary: #1e3485;
+  --primary-foreground: #fafafa;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #1e3485;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #e0e7ff;
+  --accent-foreground: #1e3485;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #1e3485;
+  --chart-1: #1e3485;
+  --chart-2: #2541a3;
+  --chart-3: #2c4ec2;
+  --chart-4: #335ae0;
+  --chart-5: #4e6efc;
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #04102f;
+  --sidebar-primary: #1e3485;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #e0e7ff;
+  --sidebar-accent-foreground: #1e3485;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #1e3485;
+  --font-sans: Poppins, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: IBM Plex Serif, ui-serif, serif;
+  --font-mono: IBM Plex Mono, ui-monospace, monospace;
+  --radius: 0.5rem;
+  --shadow-2xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.03);
+  --shadow-xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.03);
+  --shadow-sm: 0px 2px 4px 0px hsl(0 0% 0% / 0.05), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);
+  --shadow: 0px 2px 4px 0px hsl(0 0% 0% / 0.05), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);
+  --shadow-md: 0px 2px 4px 0px hsl(0 0% 0% / 0.05), 0px 2px 4px -1px hsl(0 0% 0% / 0.05);
+  --shadow-lg: 0px 2px 4px 0px hsl(0 0% 0% / 0.05), 0px 4px 6px -1px hsl(0 0% 0% / 0.05);
+  --shadow-xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.05), 0px 8px 10px -1px hsl(0 0% 0% / 0.05);
+  --shadow-2xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.13);
+  --tracking-normal: 0.025em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: #0d1326;
+  --foreground: #eef2ff;
+  --card: #0f172a;
+  --card-foreground: #eef2ff;
+  --popover: #0f172a;
+  --popover-foreground: #eef2ff;
+  --primary: #4f62a1;
+  --primary-foreground: #eef2ff;
+  --secondary: #334155;
+  --secondary-foreground: #eef2ff;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #2a3f8f;
+  --accent-foreground: #eef2ff;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #f8fafc;
+  --border: #27272a;
+  --input: #1e293b;
+  --ring: #4f62a1;
+  --chart-1: #4f62a1;
+  --chart-2: #687cc7;
+  --chart-3: #8196ec;
+  --chart-4: #9aaeff;
+  --chart-5: #b3c8ff;
+  --sidebar: #0f172a;
+  --sidebar-foreground: #eef2ff;
+  --sidebar-primary: #4f62a1;
+  --sidebar-primary-foreground: #eef2ff;
+  --sidebar-accent: #2a3f8f;
+  --sidebar-accent-foreground: #eef2ff;
+  --sidebar-border: #27272a;
+  --sidebar-ring: #4f62a1;
+  --font-sans: Poppins, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: IBM Plex Serif, ui-serif, serif;
+  --font-mono: IBM Plex Mono, ui-monospace, monospace;
+  --radius: 0.5rem;
+  --shadow-2xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow-md: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 2px 4px -1px hsl(0 0% 0% / 0.10);
+  --shadow-lg: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 4px 6px -1px hsl(0 0% 0% / 0.10);
+  --shadow-xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.10), 0px 8px 10px -1px hsl(0 0% 0% / 0.10);
+  --shadow-2xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.25);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+
+  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
+  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
+  --tracking-normal: var(--tracking-normal);
+  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
+  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
+  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+    letter-spacing: var(--tracking-normal);
+  }
 }
