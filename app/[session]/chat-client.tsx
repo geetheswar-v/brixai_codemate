@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { ChatMessage, createMessage, generateSessionId } from '@/lib/api';
+import { ChatMessage, createMessage } from '@/lib/api';
 import { sendChatMessage } from '@/lib/actions';
 import { MessageList } from '@/components/chat/message-list';
 import { ChatInput } from '@/components/chat/input';

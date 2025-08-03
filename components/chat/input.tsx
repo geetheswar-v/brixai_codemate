@@ -59,7 +59,7 @@ export function ChatInput({ classname, onSend, disabled = false }: ChatInputProp
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           onKeyDown={handleKeyDown}
-          placeholder="Ask Codemate a medical code question...."
+          placeholder="Please start a new chat for a fresh scenario."
           disabled={disabled}
           className={`
             flex-1 min-h-[40px] max-h-[120px] resize-none bg-transparent 
