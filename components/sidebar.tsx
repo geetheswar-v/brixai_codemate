@@ -17,7 +17,7 @@ export default function AppSidebar() {
   };
 
   return (
-    <Sidebar className="w-64 border-r">
+        <Sidebar className="w-64 border-r">
       <SidebarHeader className="p-4">
         <div className="flex items-center gap-2">
           <Link href="/" className="text-xl font-bold text-foreground font-josefin">
@@ -30,7 +30,7 @@ export default function AppSidebar() {
         
       </SidebarHeader>
       <Separator />
-      <SidebarContent className="p-4">
+      <SidebarContent className="p-4 relative flex flex-col h-full">
         <Button
           onClick={handleNewChat}
           className="w-full justify-start gap-2"
@@ -39,6 +39,7 @@ export default function AppSidebar() {
           <Plus className="h-4 w-4" />
           New Chat
         </Button>
+
       </SidebarContent>
     </Sidebar>
   );

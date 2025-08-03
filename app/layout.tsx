@@ -44,6 +44,11 @@ export default function RootLayout({
                 <main className="flex-1 min-h-0">
                   {children}
                 </main>
+                <footer className="bg-background/95 backdrop-blur p-2">
+                  <div className="text-center text-xs text-muted-foreground">
+                    Powered by <span className="font-semibold text-primary">Brix AI</span>
+                  </div>
+                </footer>
               </div>
             </div>
           </SidebarProvider>
